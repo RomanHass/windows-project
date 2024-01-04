@@ -14,7 +14,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const forms = () => {
   const form = document.querySelectorAll('form'),
-    inputs = document.querySelectorAll('input');
+    inputs = document.querySelectorAll('input'),
+    phoneInputs = document.querySelectorAll('input[name="user_phone"]');
+  phoneInputs.forEach(item => {
+    item.addEventListener('input', () => {
+      item.value = item.value.replace(/\D/, '');
+    });
+  });
   const message = {
     loading: 'Загрузка...',
     success: 'Спасибо! Скоро мы с вами свяжемся',
