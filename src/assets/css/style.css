@@ -13,6 +13,14 @@ body {
   color: #000000;
 }
 
+.show {
+  display: block;
+}
+
+.fade {
+  display: none;
+}
+
 .status {
   display: block;
   color: red;
